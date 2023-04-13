@@ -27,7 +27,7 @@ body {
 }
 
 section {
-  width: 80%;
+  width: 90%;
   margin: auto auto;
 }
 section .header {
@@ -46,13 +46,28 @@ section .call-to-action__info--bold {
 section .form {
   padding: 1.5rem 0;
 }
-section .form input {
-  width: 90%;
-  padding: 1rem 1rem;
+section .form .validationSpan {
+  display: block;
+  color: hsl(0, 100%, 74%);
+  text-align: right;
+  margin-right: 0.5rem;
+  font-style: italic;
+  font-weight: 500;
+  scale: 0;
+  transition: all 0.1s;
+}
+section .form .input-field {
   margin-bottom: 1.5rem;
+  width: 90%;
+  margin-inline: auto;
+}
+section .form input {
+  width: 100%;
+  padding: 1rem 5%;
   border: 1px solid hsl(246, 25%, 77%);
   border-radius: 5px;
   outline: none;
+  font-weight: 600;
 }
 section .form input::-moz-placeholder {
   font-weight: 600;
@@ -65,6 +80,16 @@ section .form input:focus {
   outline-width: 2px;
   outline-color: hsl(248, 32%, 49%);
 }
+section .form input.invalid {
+  border: 3px solid hsl(0, 100%, 74%);
+  background-image: url("../images/icon-error.svg");
+  background-repeat: no-repeat;
+  background-position: 95%;
+  color: hsl(0, 100%, 74%);
+}
+section .form input.invalid:focus {
+  outline: none;
+}
 section .form--wrapper {
   background-color: white;
   border-radius: 10px;
@@ -72,9 +97,9 @@ section .form--wrapper {
 }
 section .form__button {
   transition: all 0.2s;
-  font-weight: 600;
+  font-weight: 500;
   color: white;
-  font-size: 1.1rem;
+  font-size: 1rem;
   text-transform: uppercase;
   width: 90%;
   padding: 1rem 0rem;
