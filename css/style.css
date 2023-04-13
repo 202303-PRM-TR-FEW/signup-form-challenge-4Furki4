@@ -1,4 +1,5 @@
 .attribution {
+  margin-top: auto;
   font-size: 11px;
   text-align: center;
 }
@@ -14,6 +15,9 @@
 }
 
 body {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
   text-align: center;
   color: white;
   margin: 0;
@@ -24,7 +28,7 @@ body {
 
 section {
   width: 80%;
-  margin: 0 auto;
+  margin: auto auto;
 }
 section .header {
   padding: 4rem 0rem;
@@ -45,9 +49,10 @@ section .form {
 section .form input {
   width: 90%;
   padding: 1rem 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   border: 1px solid hsl(246, 25%, 77%);
   border-radius: 5px;
+  outline: none;
 }
 section .form input::-moz-placeholder {
   font-weight: 600;
@@ -55,12 +60,18 @@ section .form input::-moz-placeholder {
 section .form input::placeholder {
   font-weight: 600;
 }
+section .form input:focus {
+  outline-style: solid;
+  outline-width: 2px;
+  outline-color: hsl(248, 32%, 49%);
+}
 section .form--wrapper {
   background-color: white;
   border-radius: 10px;
   box-shadow: 0px 7px 0px hsl(0, 61%, 63%);
 }
 section .form__button {
+  transition: all 0.2s;
   font-weight: 600;
   color: white;
   font-size: 1.1rem;
@@ -72,14 +83,38 @@ section .form__button {
   box-shadow: 0px 4px 0px #31b980;
   background-color: hsl(154, 59%, 51%);
 }
+section .form__button:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+section .form__button:active {
+  opacity: 1;
+}
 section .form__info {
   width: 80%;
   margin-inline: auto;
   color: hsl(246, 25%, 77%);
   font-size: 0.75rem;
 }
-
-#terms-and-services {
+section #terms-and-services {
   color: hsl(0, 100%, 74%);
   font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  section {
+    display: flex;
+    gap: 3rem;
+    max-width: 1440px;
+  }
+  section .header {
+    flex-basis: 100%;
+    text-align: left;
+  }
+  section .header__title {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+  }
+  .call-to-action {
+    flex-basis: 80%;
+  }
 }/*# sourceMappingURL=style.css.map */
