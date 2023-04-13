@@ -7,20 +7,11 @@
   <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <title>Frontend Mentor | Intro component with sign up form</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution {
-      font-size: 11px;
-      text-align: center;
-    }
-
-    .attribution a {
-      color: hsl(228, 45%, 44%);
-    }
-  </style>
 </head>
 
 <body>
@@ -35,19 +26,21 @@
       </p>
     </div>
     <div class="call-to-action">
-      <button class="call-to-action__button">
-        <span class="call-to-action__button--bold-text">Try it free 7 days</span> then $20/mo. thereafter
-      </button>
+      <div class="call-to-action__info">
+        <span class="call-to-action__info--bold">Try it free 7 days</span> then $20/mo. thereafter
+      </div>
       <div class="form--wrapper">
         <form class="form" action="">
           <input required type="text" id="firstName" placeholder="First Name">
           <input required type="text" id="lastName" placeholder="Last Name">
           <input required type="email" id="email" placeholder="Email Adress">
           <input required type="password" id="password" placeholder="Password">
-          <button>
+          <button class="form__button">
             Claim your free trial
           </button>
-          <p>By clicking the button, you are agreeing to our Terms and Services</p>
+          <p class="form__info">By clicking the button, you are agreeing to our <span id="terms-and-services">Terms and
+              Services</span>
+          </p>
         </form>
       </div>
     </div>
