@@ -4,16 +4,12 @@ const firstNameControl = inputs["firstName"]
 const lastNameControl = inputs["lastName"]
 const emailControl = inputs["email"]
 const passwordControl = inputs["password"]
-function returnInputValue(controlName) {
-    let control = inputs[controlName]
-    control.addEventListener('input', (e) => {
-        return control.value
-    })
-}
+
 function setValidationErrorMessageById(spanId, errorMessage) {
     document.getElementById(spanId).style.scale = 1;
     document.getElementById(spanId).innerText = errorMessage;
 }
+
 function removeValidationErrorById(spanId) {
     document.getElementById(spanId).style.scale = 0;
     document.getElementById(spanId).innerText = '';
