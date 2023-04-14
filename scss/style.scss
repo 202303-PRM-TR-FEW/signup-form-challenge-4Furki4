@@ -158,7 +158,11 @@ section {
             text-align: left;
 
             &__title {
-                font-size: clamp(2.5rem, 5vw, 3.5rem);
+                font-size: clamp(2.5rem, 5vw, 4rem);
+            }
+
+            &__paragraph {
+                font-size: clamp(.5rem, 2vw, 1.5rem);
             }
         }
     }
